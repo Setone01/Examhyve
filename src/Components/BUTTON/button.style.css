@@ -1,0 +1,45 @@
+.button{
+    margin: 6px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.primaryBtn{
+    background-color: var(--LightYellow);
+    padding: 10px 31px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Manrope';
+    border-radius: 5px;
+    outline: none;
+    color: hsla(0, 0%, 15%, 1);
+    letter-spacing: 1.2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+
+.primaryBtn:hover{
+    background-color: hsla(162, 54%, 44%, 0.13);
+    color: hsla(161, 93%, 23%, 1);
+}
+
+.secondaryBtn{
+    background-color: var(--BackgroundWhite);
+    padding: 10px 31px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Manrope';
+    border-radius: 5px;
+    outline: none;
+    color: hsla(0, 0%, 15%, 1);
+    letter-spacing: 1.2px;
+    transition: 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.secondaryBtn:hover{
+    color: #fff;
+    background-color: hsla(161, 93%, 23%, 1);
+}
