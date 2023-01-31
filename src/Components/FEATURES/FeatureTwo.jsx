@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from "styled-components";
 import { RiQuestionnaireLine } from 'react-icons/ri'
 import { GrGroup } from 'react-icons/gr'
 import { AiOutlineLock } from 'react-icons/ai'
@@ -10,10 +9,11 @@ import { BsBoxArrowUpRight } from 'react-icons/bs'
 
 
 const FeatureTwo = () => {
-  const icon1 = <RiQuestionnaireLine/>
-  const icon2 = <GrGroup/>
-  const icon3 = <AiOutlineLock/>
-  const icon4 = <BsBoxArrowUpRight/>
+  const icon1 = <RiQuestionnaireLine color="#04704E"/>
+  const icon2 = <GrGroup color="#04704E"/>
+  const icon3 = <AiOutlineLock color="#04704E"/>
+  const icon3 = <AiOutlineLock color="#04704E"/>
+  const icon4 = <BsBoxArrowUpRight color="#04704E"/>
   const feature =[
         {
             id: 1,
@@ -41,9 +41,6 @@ const FeatureTwo = () => {
         },
     ]
   return (
-    <FeatureTwoContainer>
-      <FeatureTwoWrapper>
-        <FeatureTwoTopContainer>
           <div className="twotop flex flex-wrap order-2 justify-center align-center">
             { feature.map((mark) => (
               <div key={ mark.id } className="twotopwrap m-5 w-1/3">
@@ -57,15 +54,8 @@ const FeatureTwo = () => {
               </div>
             ))};
           </div>
-        </FeatureTwoTopContainer>
-      </FeatureTwoWrapper>
-    </FeatureTwoContainer>
   );
 };
-
-const FeatureTwoTopContainer = styled.div``
-const FeatureTwoWrapper = styled.div``
-const FeatureTwoContainer = styled.div``
 
 
 
