@@ -1,5 +1,4 @@
 import React from "react";
-import Comment from "../PAGES/Comment/comment" 
 import Courses from "../COURSES/Courses";
 import Features from "../FEATURES/Features";
 import Footer from "../FOOTER/Footer";
@@ -11,7 +10,6 @@ const Homepage = () => {
       <Hero />
       <Courses/>
       <Features/>
-      <Comment />
       <Footer/>
     </>
   );
