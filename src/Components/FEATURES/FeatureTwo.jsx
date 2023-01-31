@@ -12,7 +12,6 @@ const FeatureTwo = () => {
   const icon1 = <RiQuestionnaireLine color="#04704E"/>
   const icon2 = <GrGroup color="#04704E"/>
   const icon3 = <AiOutlineLock color="#04704E"/>
-  const icon3 = <AiOutlineLock color="#04704E"/>
   const icon4 = <BsBoxArrowUpRight color="#04704E"/>
   const feature =[
         {
