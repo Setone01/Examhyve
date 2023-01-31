@@ -4,8 +4,8 @@ import { RiQuestionnaireLine } from 'react-icons/ri'
 import { GrGroup } from 'react-icons/gr'
 import { AiOutlineLock } from 'react-icons/ai'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
-import Navbar from '../NAVBAR/Navbar'
-import Footer from '../FOOTER/Footer'
+
+
 
 
 
