@@ -48,7 +48,7 @@ const Courses = () => {
 const CoursesContainer = styled.div`
   width: 100%;
   background-color: #fff;
-  z-index: 10;
+  z-index: 9;
 
   .wrapper {
     width: 90%;
@@ -59,6 +59,7 @@ const CoursesContainer = styled.div`
     align-items: flex-start;
     flex-flow: column;
     padding: 5rem 0;
+    overflow: hidden;
   }
 
   .top {
@@ -82,10 +83,17 @@ const CoursesContainer = styled.div`
   }
 
   .bottom {
-    display: grid;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+    /* padding-right: 7rem; */
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
-    align-items: flex-start;
+    align-items: flex-start; */
   }
 
   .bottomWrapper {
@@ -104,13 +112,14 @@ const CoursesContainer = styled.div`
   }
 
   .content {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     margin-top: -0.3rem;
   }
 
   h4 {
     font-size: 16px;
     font-family: "Manrope";
+    margin-bottom: 0.7rem;
   }
 
   small {
@@ -118,6 +127,13 @@ const CoursesContainer = styled.div`
     font-weight: 600;
     font-family: "Lato";
     color: hsla(0, 13%, 3%, 0.42);
+  }
+
+  @media (max-width: 750px) {
+    .bottom{
+      grid: unset;
+
+    }
   }
 `;
 

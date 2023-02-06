@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
 html{
     font-size: 70.5%;
+    scroll-behavior: smooth;
 }
 *{
     margin: 0;
@@ -24,7 +25,8 @@ html{
     list-style: none;
 }
 body{
-    font-family: 'Public Sans', sans-serif;
+    font-family: 'Manrope', sans-serif;
+    
 }
 a{
     color: var(--LightBlack);

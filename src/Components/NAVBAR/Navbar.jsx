@@ -2,27 +2,39 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Button from "../BUTTON/Button";
-import { BUTTON_TYPES } from "../../STYLES/button";
 import { RiMoonFill } from "react-icons/ri";
 import { BiSun } from "react-icons/bi";
+import { VscChromeClose } from "react-icons/vsc";
+import { HiOutlineBars3 } from "react-icons/hi2";
 
 const Navbar = () => {
   const [isDark, setIsDark] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
+
+  const menuBar = <HiOutlineBars3 color="#04704e" fontSize="4rem"/>;
+  const closeMenu = <VscChromeClose color="#04704e" fontSize="4rem" />;
+
+  const Dark = <RiMoonFill color="#04704e"/>
+  const  Light = <BiSun color="#04704e"/>
+
+
+  const handleClick = () => setIsMobile(!isMobile)
 
   //Navlink objeects
   const Data = [
     {
-      id: 1,
+      display: "Home",
+      path: "/",
+    },
+    {
       display: "Courses",
       path: "/courses",
     },
     {
-      id: 2,
       display: "Blog",
       path: "/blog",
     },
     {
-      id: 3,
       display: "About",
       path: "/about",
     },
@@ -35,20 +47,23 @@ const Navbar = () => {
             ExamHyve
           </Link>
         </div>
-        <div className="NavLink">
-          {Data.map((link) => (
-            <li key={link.id}>
+        <ul onClick={handleClick} className="NavLink">
+          {Data.map((link, index) => (
+            <li key={index}>
               <Link className="Link" to={link.path}>
                 {link.display}
               </Link>
             </li>
           ))}
-        </div>
+        </ul>
         <div className="Login">
-          <Button type={BUTTON_TYPES.PRIMARY} btnText="Log In" />
+          <Button btnText="Log In" />
           <div className="darkTheme" onClick={() => setIsDark(!isDark)}>
-            {isDark ? <BiSun /> : < RiMoonFill/>}
+            {isDark ? Light : Dark}
           </div>
+        </div>  
+        <div className="mobileToggle">
+          {isMobile? menuBar : closeMenu}
         </div>
       </div>
     </Navigation>
@@ -57,18 +72,17 @@ const Navbar = () => {
 
 const Navigation = styled.div`
   width: 100%;
-  height: 6rem;
-  top: 0;
-  left: 0;
+  height: 6rem; 
   background-color: #fff;
   position: fixed;
-  display: grid;
-  place-items: center;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 0px 10px 0px;
   z-index: 99;
+  overflow-x: hidden;
 
   .Container {
     width: 90%;
     height: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,19 +98,20 @@ const Navigation = styled.div`
 
   .NavLink {
     display: flex;
-    width: 20%;
     justify-content: space-between;
+    align-items: center;
+    width: 25%;
   }
-  .Login{
+  .Login {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
   }
 
-  .darkTheme{
+  .darkTheme {
     display: block;
-    svg{
+    svg {
       font-size: 20px;
       color: hsla(0, 0%, 15%, 1);
       cursor: pointer;
@@ -104,6 +119,23 @@ const Navigation = styled.div`
     }
   }
 
+  .mobileToggle{
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .NavLink{
+      display: none;
+    }
+
+    .mobileToggle{
+      display: block;
+    }
+
+    .Login{
+      display: none;
+    }
+  }
 `;
 
 export default Navbar;
