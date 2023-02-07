@@ -7,7 +7,7 @@ import GettingStarted from "./HomeComponent/GettingStarted/index";
 const index = () => {
   return (
     <>
-//       <Hero />
+      <Hero />
       <Courses />
       <Features />
       <GettingStarted />
