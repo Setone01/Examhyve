@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
 
 
 html{
-    font-size: 70.5%;
+    font-size: 62.5%;
     scroll-behavior: smooth;
 }
 *{
@@ -28,6 +28,13 @@ body{
     font-family: 'Manrope', sans-serif;
     
 }
+
+@media (max-width: 800px) {
+  html{
+    font-size: 80.6%;
+  }
+}
+
 a{
     color: var(--LightBlack);
     font-size: 15px;
