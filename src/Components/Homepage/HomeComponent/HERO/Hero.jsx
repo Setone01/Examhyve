@@ -30,7 +30,7 @@ const Hero = () => {
         <div className="heroRight">
           <div className="ImgWrapper">
             <div className="HeroImg">
-//               <img src={heroImage} alt="heroImage" />
+             
             </div>
             <div className="Box1">
               <img src={Einsten} alt="eisnten" />
