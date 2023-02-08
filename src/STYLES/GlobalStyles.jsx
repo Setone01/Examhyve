@@ -38,24 +38,6 @@
 //     font-size: 80.6%;
 //   }
 // }
-
-// *{
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-//     text-decoration: none;
-//     list-style: none;
-// }
-// body{
-   
-    
-// }
-// a{
-//     color: var(--LightBlack);
-//     font-size: 15px;
-//     font-family: "Manrope";
-//     font-weight: 600;
-// }
 // `;
 
 // export default GlobalStyle;
