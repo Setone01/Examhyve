@@ -28,7 +28,7 @@ const Hero = () => {
             btnText="🎉 we are at 3 users"
           />
         </div>
-<<<<<<< HEAD
+
         {/* <div className="heroRight">
           <div className="ImgWrapper">
             <div className="HeroImg">
@@ -45,8 +45,6 @@ const Hero = () => {
             </div>
           </div>
         </div> */}
-=======
->>>>>>> 23186e986efbd0514f60f8ffbf57c5f6dbd059f9
       </div>
     </HeroContainer>
   );
