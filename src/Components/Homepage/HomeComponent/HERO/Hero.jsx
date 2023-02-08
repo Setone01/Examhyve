@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { BUTTON_TYPES } from "../../../../STYLES/button";
 import Button from "../../../BUTTON/Button";
 import { IoBookOutline } from "react-icons/io5";
-import heroImage from "../../../../Utils/images/image 1.png";
-import Einsten from "../../../../Utils/images/einsten.png";
-import Success from "../../../../Utils/images/success.png";
-import Record from "../../../../Utils/images/record.png";
+// import heroImage from "../../../../Utils/images/image 1.png";
+// import Einsten from "../../../../Utils/images/einsten.png";
+// import Success from "../../../../Utils/images/success.png";
+// import Record from "../../../../Utils/images/record.png";
 
 const Hero = () => {
   return (
@@ -27,7 +27,7 @@ const Hero = () => {
             btnText="🎉 we are at 3 users"
           />
         </div>
-        <div className="heroRight">
+        {/* <div className="heroRight">
           <div className="ImgWrapper">
             <div className="HeroImg">
               <img src={heroImage} alt="heroImage" />
@@ -42,7 +42,7 @@ const Hero = () => {
               <img src={Record} alt="records" />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </HeroContainer>
   );
