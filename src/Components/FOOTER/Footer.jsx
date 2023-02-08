@@ -88,22 +88,20 @@ const FooterContainer = styled.div`
     font-family: "Manrope";
     font-weight: 600;
     font-size: 18px;
-    line-height: 120%;
     color: #060606;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
   }
 
   .footerLink2 h2{
     font-family: "Manrope";
     font-weight: 600;
     font-size: 18px;
-    line-height: 120%;
     color: #060606;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
   }
 
   .Flinks {
-    margin-bottom: 10px;
+    /* margin-bottom: 5px; */
   }
   .Flinks a {
     font-family: "Manrope";
