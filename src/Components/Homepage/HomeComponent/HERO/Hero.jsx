@@ -3,13 +3,11 @@ import styled from "styled-components";
 import { BUTTON_TYPES } from "../../../../STYLES/button";
 import Button from "../../../BUTTON/Button";
 import { IoBookOutline } from "react-icons/io5";
-<<<<<<< HEAD
 // import heroImage from "../../../../Utils/images/image 1.png";
 // import Einsten from "../../../../Utils/images/einsten.png";
 // import Success from "../../../../Utils/images/success.png";
 // import Record from "../../../../Utils/images/record.png";
-=======
->>>>>>> 23186e986efbd0514f60f8ffbf57c5f6dbd059f9
+
 
 const Hero = () => {
   return (
