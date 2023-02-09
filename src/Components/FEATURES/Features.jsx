@@ -6,7 +6,7 @@ import '../FEATURES/feature.css'
 const Features = () => {
   return (
     <FeaturesCont className="w- bg-green-700">
-      <FeatureWrapper className="flex py-20 w-11/12 m-auto">
+      <FeatureWrapper className="flex py-20 m-auto">
         <FeatureLeft className="w-1/3 mr-40">
           <ContentTop className="max-w-6xl">
             <FeatureSpan className="text-2xl text-white pb-8" >Our features</FeatureSpan>
@@ -42,7 +42,8 @@ const Features = () => {
 };
 
 const FeaturesCont = styled.div``
-const FeatureWrapper = styled.div``
+const FeatureWrapper = styled.div`
+width: 90%;`
 const FeatureLeft = styled.div``
 const ContentTop = styled.div``
 const FeatureSpan = styled.span``
