@@ -62,6 +62,7 @@ const Icon = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
+  padding: 0.8rem;
 
   img {
     width: 20px;
@@ -71,34 +72,32 @@ const Icon = styled.div`
     height: 5rem;
     width: 5rem;
     img {
-      width: 30px;
+      width: 20px;
     }
   }
 `;
 
-const Title = styled.h3`
+const Title = styled.h4`
   color: #ffbf37;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 151.6%;
+  font-size: 16px;
   margin-bottom: 0.5rem;
   @media (max-width: 800px) {
     text-align: center;
-    font-size: 25px;
+    font-size: 18px;
   }
 `;
 
-const Para = styled.small`
+const Para = styled.p`
   font-family: "Manrope";
   font-weight: 100;
   font-size: 15px;
-  line-height: 141.5%;
   color: #ffffff;
   @media (max-width: 800px) {
     text-align: center;
-    font-size: 20px;
+    font-size: 13px;
     /* width: 80px; */
   }
 `;

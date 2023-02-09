@@ -24,10 +24,10 @@ const Section = styled.div`
   padding: 4rem 0;
   .Container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 80%;
-    height: 300px;
+    /* height: 300px; */
     margin: 0 auto;
     background-color: #eaf5f2;
     border-radius: 10px;
@@ -36,16 +36,14 @@ const Section = styled.div`
   }
 
   .Left {
-    flex: 1;
-    padding-right: 4rem;
+    flex-basis: 60%;
 
     h3 {
       font-family: "Manrope";
-      font-weight: 600;
+      font-weight: 500;
       font-size: 28px;
       line-height: 151.6%;
       text-transform: capitalize;
-
       color: #252525;
     }
   }
@@ -54,7 +52,7 @@ const Section = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    flex-basis: 40%;
   }
 
   @media (max-width: 825px) {
@@ -67,9 +65,13 @@ const Section = styled.div`
       /* margin-bottom: 3rem; */
 
       h3 {
-        font-size: 20px;
+        font-size: 15px;
         text-align: center;
       }
+    }
+
+    .Right{
+      margin: 0;
     }
   }
 

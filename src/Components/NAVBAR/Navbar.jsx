@@ -15,7 +15,7 @@ const Navbar = () => {
   const closeMenu = <VscChromeClose color="#04704e" fontSize="4rem" />;
 
   const Dark = <RiMoonFill color="#04704e"/>
-  const  Light = <BiSun color="#04704e"/>
+  const  Light = <BiSun color="#04704e" />
 
 
   const handleClick = () => setIsMobile(!isMobile)
@@ -124,12 +124,21 @@ const Navigation = styled.div`
   }
 
   @media (max-width: 768px) {
+
+    .Logo a{
+      font-size: 20px;
+      font-weight: 800;
+    }
     .NavLink{
       display: none;
     }
 
     .mobileToggle{
       display: block;
+
+      svg{
+      font-size: 28px;
+      }
     }
 
     .Login{

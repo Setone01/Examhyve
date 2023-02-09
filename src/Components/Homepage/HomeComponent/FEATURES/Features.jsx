@@ -68,24 +68,24 @@ padding-top: 3rem;
 `;
 const FeatureSpan = styled.span`
   font-family: "Manrope";
-  font-size: 20px;
-  color: #ffffff;
+  font-size: 18px;
+  color: #FFBF37;
   margin-bottom: 1rem;
   @media (max-width: 800px) {
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
   }
 `;
 const Title = styled.h3`
   font-family: "Manrope";
-  font-size: 30px;
+  font-size: 25px;
   color: #ffffff;
   font-weight: 600;
   margin-top: 1rem ;
   margin-bottom: 1.7rem ;
   text-transform: capitalize;
   @media (max-width: 800px) {
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 800;
   }
 `;
@@ -93,12 +93,12 @@ const Title = styled.h3`
 const Para = styled.p`
   font-family: "Manrope";
   font-weight: 200;
-  font-size: 16px;
+  font-size: 15px;
   color: #FFFFFF;
   line-height: 1.7em;
   margin-bottom: 1rem;
   @media (max-width: 800px) {
-    font-size: 16px;
+    font-size: 13px;
     width: 100%;
   }
 `;
@@ -113,17 +113,17 @@ const Num = styled.h3`
 font-family: 'Manrope';
 font-style: normal;
 font-weight: 700;
-font-size: 28px;
+font-size: 25px;
 line-height: 151.6%;
 text-transform: capitalize;
 color: #FFBF37;
 
-@media (screen) {
-  
+@media (max-width: 800px) {
+  font-size: 23px;
 }
 
 `;
-const Small = styled.p`
+const Small = styled.small`
 font-family: 'Manrope';
 font-weight: 100;
 font-size: 13px;
@@ -131,7 +131,7 @@ line-height: 151.6%;
 text-transform: capitalize;
 color: #FFBF37;
 @media (max-width: 800px) {
-   font-size: 18px;
+   font-size: 13px;
   }
 `;
 

@@ -11,7 +11,7 @@ const Footer = () => {
     <FooterContainer>
       <div className="Container">
         <div className="logo">
-          <h1>Examhyve</h1>
+          <h3>Examhyve</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
             labore cupiditate corporis fugit nisi architecto ratione. Neque
@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
 
         <div className="footerLink">
-          <h2>Help & Support</h2>
+          <h4>Help & Support</h4>
           {FooterLink.map((data, index) => (
             <ul key={index} className="Flinks">
               <Link to={data.path}>{data.label}</Link>
@@ -29,7 +29,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="footerLink2">
-          <h2>Privacy Policy</h2>
+          <h4>Privacy Policy</h4>
           {FooterLink2.map((data, index) => (
             <ul key={index} className="Flinks">
               <Link to={data.path}>{data.label}</Link>
@@ -50,6 +50,7 @@ const Footer = () => {
 };
 
 const FooterContainer = styled.div`
+
   .Container {
     display: flex;
     justify-content: space-between;
@@ -65,16 +66,16 @@ const FooterContainer = styled.div`
   .logo {
     flex: 1.5;
   }
-  .logo h1 {
+  .logo h3 {
     font-family: "HeadlandOne";
     font-weight: 400;
-    font-size: 32px;
+    font-size: 25px;
     color: #252525;
     margin-bottom: 1rem;
   }
   .logo p {
     font-size: 15px;
-    line-height: 1.7em;
+    line-height: 1.5em;
     color: #060606;
     font-family: "Manrope";
     font-weight: 100;
@@ -84,28 +85,28 @@ const FooterContainer = styled.div`
   .footerLink, .footerLink2 {
     flex: 1;
   }
-  .footerLink h2 {
+  .footerLink h4 {
     font-family: "Manrope";
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     color: #060606;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
   }
 
-  .footerLink2 h2{
+  .footerLink2 h4{
     font-family: "Manrope";
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     color: #060606;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
   }
 
   .Flinks {
-    /* margin-bottom: 5px; */
+    margin-bottom: 5px;
   }
   .Flinks a {
     font-family: "Manrope";
-    font-weight: 100;
+    font-weight: 500;
     font-size: 15px;
     color: #060606;
   }
@@ -134,23 +135,26 @@ const FooterContainer = styled.div`
       flex-direction: column;
       gap: 3rem;
     }
+    .logo h3{
+      font-size: 25px;
+    }
     .logo p{
-      font-size: 18px;
+      font-size: 13px;
       padding-right: 0;
     }
 
     .Flinks a {
       font-weight: 200;
-      font-size: 18px;
+      font-size: 13px;
     }
 
-    .footerLink, .footerLink2 > h2 {
-      font-size: 20px;
-      /* font-weight: 900; */
+    .footerLink > h2, .footerLink2 > h2 {
+      font-size: 20px; 
+     /* font-weight: 900; */
     }
 
     .social__link svg {
-      font-size: 30px;
+      font-size: 25px;
       color: #14906a;
       cursor: pointer;
     }
