@@ -2,6 +2,7 @@ import lock from "../images/lock.png";
 import share from "../images/share.png";
 import users from "../images/users.png";
 import question from "../images/question.png";
+import SubImage from "../images/image 12.png"
 
 export const Card = [
   {
@@ -55,3 +56,16 @@ export const FooterLink2 = [
     label: "Support",
   },
 ];
+
+export const creditedCourses = [
+  {
+    image: SubImage,
+    subject:' Mathematics',
+    path: '#',
+  },
+  {
+    image: SubImage,
+    subject:'English',
+    path: '#',
+  }
+]

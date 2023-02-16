@@ -26,22 +26,22 @@
 }
 
 .secondaryBtn{
-    background-color: var(--BackgroundWhite);
+    background-color:hsla(161, 93%, 23%, 1);
     padding: 10px 31px;
     font-size: 12px;
     font-weight: 600;
     font-family: 'Manrope';
     border-radius: 5px;
     outline: none;
-    color: hsla(0, 0%, 15%, 1);
+    color: #FFFFFF;
     letter-spacing: 1.2px;
     transition: 0.3s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .secondaryBtn:hover{
-    color: #fff;
-    background-color: hsla(161, 93%, 23%, 1);
+    color: hsla(161, 93%, 23%, 1);
+    background-color: hsla(162, 54%, 44%, 0.13);
 }
 
 .tertiaryBtn{

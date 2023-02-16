@@ -11,14 +11,13 @@ const Navbar = () => {
   const [isDark, setIsDark] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
 
-  const menuBar = <HiOutlineBars3 color="#04704e" fontSize="4rem"/>;
+  const menuBar = <HiOutlineBars3 color="#04704e" fontSize="4rem" />;
   const closeMenu = <VscChromeClose color="#04704e" fontSize="4rem" />;
 
-  const Dark = <RiMoonFill color="#04704e"/>
-  const  Light = <BiSun color="#04704e" />
+  const Dark = <RiMoonFill color="#04704e" />;
+  const Light = <BiSun color="#04704e" />;
 
-
-  const handleClick = () => setIsMobile(!isMobile)
+  const handleClick = () => setIsMobile(!isMobile);
 
   //Navlink objeects
   const Data = [
@@ -61,9 +60,9 @@ const Navbar = () => {
           <div className="darkTheme" onClick={() => setIsDark(!isDark)}>
             {isDark ? Light : Dark}
           </div>
-        </div>  
-        <div className="mobileToggle">
-          {isMobile? menuBar : closeMenu}
+        </div>
+        <div className="mobileToggle" onClick={() => setIsMobile(!isMobile)}>
+          {isMobile ? menuBar : closeMenu}
         </div>
       </div>
     </Navigation>
@@ -72,7 +71,7 @@ const Navbar = () => {
 
 const Navigation = styled.div`
   width: 100%;
-  height: 6rem; 
+  height: 6rem;
   background-color: #fff;
   position: fixed;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 0px 10px 0px;
@@ -102,6 +101,10 @@ const Navigation = styled.div`
     align-items: center;
     width: 25%;
   }
+
+  .NavLink li a {
+    color: #0A0707;
+  }
   .Login {
     display: flex;
     justify-content: center;
@@ -119,29 +122,28 @@ const Navigation = styled.div`
     }
   }
 
-  .mobileToggle{
+  .mobileToggle {
     display: none;
   }
 
   @media (max-width: 768px) {
-
-    .Logo a{
+    .Logo a {
       font-size: 20px;
       font-weight: 800;
     }
-    .NavLink{
+    .NavLink {
       display: none;
     }
 
-    .mobileToggle{
+    .mobileToggle {
       display: block;
 
-      svg{
-      font-size: 28px;
+      svg {
+        font-size: 28px;
       }
     }
 
-    .Login{
+    .Login {
       display: none;
     }
   }

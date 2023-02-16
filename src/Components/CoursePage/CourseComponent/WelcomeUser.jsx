@@ -8,12 +8,12 @@ const WelcomeUser = () => {
     <Container>
       <div className="Wrapper">
         <div className="Title">
-          <h2>Hi, Sam</h2>
+          <h3>Hi, User</h3>
           <p>Lets get started with your learning today.</p>
         </div>
         <div className="TestContainer">
           <div className="testImg">
-            <img src={CourseImg} alt={CourseImg} />
+            <img src={CourseImg} alt="courseImg" />
           </div>
           <div className="courseContainer">
             <h4>Take your Jamb questions</h4>
@@ -26,7 +26,7 @@ const WelcomeUser = () => {
                 <small>20mins</small>
               </div>
             </div>
-            <Button btnText="Take Test" />
+            <Button btnText="Take Test" to='/Homepage' />
           </div>
         </div>
       </div>
@@ -38,19 +38,20 @@ const Container = styled.div`
   .Wrapper {
     display: flex;
     justify-content: center;
-    padding-top: 12rem;
+    padding-top: 9rem;
+    padding-bottom: 4rem;
     width: 90%;
     margin: 0 auto;
     flex-flow: column;
+    z-index: 10;
   }
 
   .Title {
     margin-bottom: 2rem;
-    h2 {
+    h3 {
       font-family: "Manrope";
       font-weight: 700;
-      font-size: 30px;
-      /* line-height: 61px; */
+      font-size: 25px;
       text-transform: capitalize;
       color: #0a0707;
       margin-bottom: 0.5rem;
@@ -59,7 +60,7 @@ const Container = styled.div`
     p {
       font-family: "Manrope";
       font-weight: 400;
-      font-size: 18px;
+      font-size: 15px;
       color: #0a0707;
     }
   }
@@ -67,18 +68,23 @@ const Container = styled.div`
   .TestContainer {
     display: flex;
     align-items: center;
-    width: 900px;
+    max-width: 700px;
+    max-height: 300px;
+    /* background-color: #04704e; */
     border: 1.3px solid rgba(97, 119, 248, 0.36);
-    border-radius: 5px 0 0 5px;
+
+    border-radius: 5px;
     z-index: 9;
   }
 
   .testImg {
     flex: 3;
-    img {
-      width: 500px;
-      height: max-content;
-    }
+  }
+
+  .testImg img{
+    width: 100%;
+    height: 299px;
+    object-fit: cover;
   }
 
   .courseContainer {
@@ -91,7 +97,7 @@ const Container = styled.div`
     h4 {
       font-family: "Manrope";
       font-style: normal;
-      font-weight: 7600;
+      font-weight: 600;
       font-size: 20px;
       line-height: 33px;
       text-align: center;
@@ -126,14 +132,16 @@ const Container = styled.div`
   }
 
 
-  @media (max-width: 800px) {
+  @media (max-width: 768px) {
     .TestContainer {
       position: relative;
+      align-items: flex-start;
       flex-flow: column;
       width: 100%;
       border: none;
     }
     .testImg {
+      width: 100%;
       img {
         width: 100%;
         border-radius: 5px;
@@ -141,8 +149,11 @@ const Container = styled.div`
     }
 
     .Title{
-      h2{
-        font-size: 27px;
+      h3{
+        font-size: 20px;
+      }
+      p{
+        font-size: 15px;
       }
     }
 
