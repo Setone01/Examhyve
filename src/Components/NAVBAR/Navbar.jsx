@@ -9,7 +9,7 @@ import { HiOutlineBars3 } from "react-icons/hi2";
 
 const Navbar = () => {
   const [isDark, setIsDark] = useState(false);
-  const [isMobile, setIsMobile] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   const menuBar = <HiOutlineBars3 color="#04704e" fontSize="4rem" />;
   const closeMenu = <VscChromeClose color="#04704e" fontSize="4rem" />;
@@ -31,11 +31,11 @@ const Navbar = () => {
     },
     {
       display: "Blog",
-      path: "/blog",
+      path: "#",
     },
     {
       display: "About",
-      path: "/about",
+      path: "#",
     },
   ];
   return (
@@ -46,23 +46,27 @@ const Navbar = () => {
             ExamHyve
           </Link>
         </div>
-        <ul onClick={handleClick} className="NavLink">
-          {Data.map((link, index) => (
-            <li key={index}>
-              <Link className="Link" to={link.path}>
-                {link.display}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <div className="Login">
-          <Button btnText="Log In" />
-          <div className="darkTheme" onClick={() => setIsDark(!isDark)}>
-            {isDark ? Light : Dark}
+
+        <ul className={isMobile ? "MobileNav" : "NavLink"}>
+          <div className="NavigationUl">
+            {Data.map((link, index) => (
+              <li key={index} onClick={handleClick}>
+                <Link className="Link" to={link.path}>
+                  {link.display}
+                </Link>
+              </li>
+            ))}
           </div>
-        </div>
+          <div className="Login">
+            <Button btnText="Log In" />
+            <div className="darkTheme" onClick={() => setIsDark(!isDark)}>
+              {isDark ? Light : Dark}
+            </div>
+          </div>
+        </ul>
+
         <div className="mobileToggle" onClick={() => setIsMobile(!isMobile)}>
-          {isMobile ? menuBar : closeMenu}
+          {isMobile ? closeMenu : menuBar}
         </div>
       </div>
     </Navigation>
@@ -75,8 +79,8 @@ const Navigation = styled.div`
   background-color: #fff;
   position: fixed;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 0px 10px 0px;
-  z-index: 99;
-  overflow-x: hidden;
+  z-index: 90;
+  /* overflow-x: hidden; */
 
   .Container {
     width: 90%;
@@ -99,12 +103,19 @@ const Navigation = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 25%;
+    width: 65%;
   }
 
   .NavLink li a {
-    color: #0A0707;
+    color: #0a0707;
   }
+
+  .NavigationUl {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+  }
+
   .Login {
     display: flex;
     justify-content: center;
@@ -127,24 +138,65 @@ const Navigation = styled.div`
   }
 
   @media (max-width: 768px) {
-    .Logo a {
-      font-size: 20px;
-      font-weight: 800;
+    .Container {
+      width: 100%;
     }
+    .Logo {
+      margin-left: 2rem;
+      a {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+
+    .MobileNav {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      top: 6rem;
+      right: 0;
+      height: calc(100vh - 6rem);
+      width: 100%;
+      text-align: center;
+      z-index: 99;
+      background-color: #EAF5F2;
+    }
+
+    .NavigationUl {
+      flex-flow: column;
+      /* text-align: center; */
+      width: min-content;
+    }
+    .NavigationUl li {
+      margin-bottom: 4rem;
+    }
+    .NavigationUl li a {
+      font-size: 22px;
+      font-weight: 200;
+      color: #0a0707;
+    }
+
     .NavLink {
       display: none;
     }
 
     .mobileToggle {
       display: block;
+      margin-right: 2rem;
 
       svg {
-        font-size: 28px;
+        font-size: 30px;
       }
     }
 
     .Login {
-      display: none;
+      width: 100%;
+    }
+
+    .darkTheme svg{
+      font-size: 25px;
     }
   }
 `;

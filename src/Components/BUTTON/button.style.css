@@ -57,7 +57,7 @@
 
 }
 
-.tertiartyBtn:hover{
+.tertiaryBtn:hover{
     background-color: hsla(162, 54%, 44%, 0.13);
     color: hsla(161, 93%, 23%, 1);
 }
