@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { BUTTON_TYPES } from "../../../../STYLES/button";
 import Button from "../../../BUTTON/Button";
 import { IoBookOutline } from "react-icons/io5";
+import heroImg from "../../../../Utils/svg/hero_image.svg"
 
 
 const Hero = () => {
@@ -24,6 +25,9 @@ const Hero = () => {
             btnText="🎉 we are at 3 users"
           />
         </div>
+        <div className="HeroImg">
+          <img src={heroImg} alt="hero" />
+        </div>
       </div>
     </HeroContainer>
   );
@@ -43,7 +47,7 @@ const HeroContainer = styled.div`
     align-items: center;
     width: 90%;
     margin: 0 auto;
-    padding: 150px 0 5rem 0;
+    padding: 150px 0 6rem 0;
   }
 
   .heroLeft {
@@ -72,6 +76,43 @@ const HeroContainer = styled.div`
     font-weight: 400;
     color: hsla(0, 0%, 2%, 1);
     margin-bottom: 1rem;
+  }
+
+  .HeroImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 500px; */
+    flex: 1;
+  }
+
+  .HeroImg img{
+    width: 100%;
+    /* object-fit: cover; */
+  }
+
+  @media (max-width: 800px) {
+    .heroWrapper{
+      flex-direction: column;
+      padding-top: 9rem;
+    }
+
+    .title{
+      padding-right: 0;
+      margin-bottom: 15px;
+    }
+
+    .title h2{
+      font-size: 35px;
+    }
+
+    p{
+      font-size: 15px;
+    }
+
+    .HeroImg{
+   margin-top: 3rem;
+  }
   }
 `;
 export default Hero;

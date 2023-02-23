@@ -17,7 +17,8 @@ const Navbar = () => {
   const Dark = <RiMoonFill color="#04704e" />;
   const Light = <BiSun color="#04704e" />;
 
-  const handleClick = () => setIsMobile(!isMobile);
+  // const handleClick = () => setIsMobile(!isMobile);
+  // onClick={handleClick}
 
   //Navlink objeects
   const Data = [
@@ -31,7 +32,7 @@ const Navbar = () => {
     },
     {
       display: "Blog",
-      path: "#",
+      path: "/blog",
     },
     {
       display: "About",
@@ -47,16 +48,16 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <ul className={isMobile ? "MobileNav" : "NavLink"}>
-          <div className="NavigationUl">
+        <ul className={isMobile ? 'mobileLink' : 'NavLink'}>
+          <ul className="NavigationUl">
             {Data.map((link, index) => (
-              <li key={index} onClick={handleClick}>
-                <Link className="Link" to={link.path}>
+              <li key={index} >
+                <Link className="Link" to={link.path} onClick={() => setIsMobile (!isMobile)}>
                   {link.display}
                 </Link>
               </li>
             ))}
-          </div>
+          </ul>
           <div className="Login">
             <Button btnText="Log In" />
             <div className="darkTheme" onClick={() => setIsDark(!isDark)}>
@@ -113,6 +114,7 @@ const Navigation = styled.div`
   .NavigationUl {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 45%;
   }
 
@@ -149,7 +151,7 @@ const Navigation = styled.div`
       }
     }
 
-    .MobileNav {
+    .mobileLink {
       position: absolute;
       display: flex;
       justify-content: center;
@@ -161,7 +163,7 @@ const Navigation = styled.div`
       width: 100%;
       text-align: center;
       z-index: 99;
-      background-color: #EAF5F2;
+      background-color: #eaf5f2;
     }
 
     .NavigationUl {
@@ -195,7 +197,7 @@ const Navigation = styled.div`
       width: 100%;
     }
 
-    .darkTheme svg{
+    .darkTheme svg {
       font-size: 25px;
     }
   }

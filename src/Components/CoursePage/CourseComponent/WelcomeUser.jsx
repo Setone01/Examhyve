@@ -1,9 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import route from "../../../routes.const";
 import CourseImg from "../../../Utils/images/courseImg.png";
 import Button from "../../BUTTON/Button";
 
 const WelcomeUser = () => {
+  const navigate = useNavigate();
+  function handleNavigate() {
+    navigate(route.test);
+  }
+
   return (
     <Container>
       <div className="Wrapper">
@@ -26,7 +33,11 @@ const WelcomeUser = () => {
                 <small>20mins</small>
               </div>
             </div>
-            <Button btnText="Take Test" to='/Homepage' />
+            <Button
+              onClick={handleNavigate}
+              btnText="Take Test"
+              to="/Homepage"
+            />
           </div>
         </div>
       </div>
@@ -72,7 +83,6 @@ const Container = styled.div`
     max-height: 300px;
     /* background-color: #04704e; */
     border: 1.3px solid rgba(97, 119, 248, 0.36);
-
     border-radius: 5px;
     z-index: 9;
   }
@@ -81,7 +91,7 @@ const Container = styled.div`
     flex: 3;
   }
 
-  .testImg img{
+  .testImg img {
     width: 100%;
     height: 299px;
     object-fit: cover;
@@ -131,7 +141,6 @@ const Container = styled.div`
     /* border: 1px solid #04704E; */
   }
 
-
   @media (max-width: 768px) {
     .TestContainer {
       position: relative;
@@ -148,11 +157,11 @@ const Container = styled.div`
       }
     }
 
-    .Title{
-      h3{
+    .Title {
+      h3 {
         font-size: 20px;
       }
-      p{
+      p {
         font-size: 15px;
       }
     }
@@ -163,14 +172,13 @@ const Container = styled.div`
       right: 50%;
       transform: translate(50%, -50%);
 
-      h4{
+      h4 {
         display: none;
       }
     }
 
     .CourseButton {
       background: hsla(0, 0%, 100%, 1);
-
     }
   }
 `;

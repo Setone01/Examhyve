@@ -3,7 +3,7 @@ import { BUTTON_TYPES } from "../../STYLES/button";
 import "./button.style.css";
 
 const Button = (props) => {
-  const { type, btnText, icon } = props;
+  const { type, btnText, icon, onClick } = props;
 
   const getButtonClass = () => {
     switch (type) {
@@ -17,7 +17,7 @@ const Button = (props) => {
         return "tertiaryBtn button";
     }
   };
-  return <div className={`${getButtonClass()}`}>{icon}{btnText}</div>;
+  return <button onClick={onClick} className={`${getButtonClass()}`}>{icon}{btnText}</button>;
 };
 
 export default Button;

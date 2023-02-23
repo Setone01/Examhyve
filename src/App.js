@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./Components/Homepage/index";
 import Courses from "./Components/CoursePage/index";
 import Footer from "./Components/FOOTER/Footer";
+import ViewCourse from "./Components/GetStarted/index";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/courses" element={<Courses/>}/>
+          <Route path="/courses/test" element={<ViewCourse/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

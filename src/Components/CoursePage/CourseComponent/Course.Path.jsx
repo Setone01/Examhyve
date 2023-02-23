@@ -1,8 +1,15 @@
 import React from "react";
+// import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { creditedCourses } from "../../../Utils/Db/dummydata";
 
 const Courses = () => {
+
+  // const navigate = useNavigate();
+  // function handleNavigate() {
+  //   navigate("/");
+  // }
+
   return (
     <CourseContainer>
       <div className="Container">

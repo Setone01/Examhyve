@@ -1,9 +1,10 @@
-.button{
+button{
     margin: 6px 0;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
 }
 
 .primaryBtn{
