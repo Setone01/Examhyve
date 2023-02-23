@@ -65,7 +65,7 @@ const HeroContainer = styled.div`
 
     h2 {
       font-family: "Manrope";
-      font-size: 45px;
+      font-size: 40px;
       font-weight: 700;
       color: hsla(0, 0%, 2%, 1);
     }
