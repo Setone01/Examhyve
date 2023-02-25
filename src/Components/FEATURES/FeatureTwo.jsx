@@ -43,8 +43,8 @@ const FeatureTwo = () => {
           <div className="twotop flex flex-wrap order-2 justify-center align-center">
             { feature.map((mark) => (
               <div key={ mark.id } className="twotopwrap m-5 w-1/3">
-                <div className="w-16 h-16 rounded-full justify-items-center bg-white text-green-800 text-2xl">
-                  <i className='flex items-center justify-center pt-5'> { mark.icon } </i>
+                <div className="w-16 h-16 rounded-full justify-items-center bg-white text-2xl">
+                  <i className='flex items-center justify-center pt-5 text-green-700'> { mark.icon } </i>
                 </div>
                 <div className="twotopcontent w-3/4 ">
                   <h4 className='text-2xl text-white font-semibold py-2'> { mark.title } </h4>
