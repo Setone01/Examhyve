@@ -5,6 +5,8 @@ import Homepage from "./Components/Homepage/index";
 import Courses from "./Components/CoursePage/index";
 import Footer from "./Components/FOOTER/Footer";
 import ViewCourse from "./Components/GetStarted/index";
+import EnglishTEst from "./Components/Subjects/English/englishverb";
+import Mathematics from "./Components/Subjects/math/math"
 
 function App() {
   return (
@@ -16,6 +18,9 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/courses" element={<Courses/>}/>
           <Route path="/courses/test" element={<ViewCourse/>}/>
+          <Route path="/english/test" element={<EnglishTEst/>}/>
+          <Route path="/mathematics/test" element={<Mathematics/>}/>
+
         </Routes>
         <Footer/>
       </BrowserRouter>
