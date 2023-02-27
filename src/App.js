@@ -18,8 +18,8 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/courses" element={<Courses/>}/>
           <Route path="/courses/test" element={<ViewCourse/>}/>
-          <Route path="/english/test" element={<EnglishTEst/>}/>
-          <Route path="/mathematics/test" element={<Mathematics/>}/>
+          <Route path="/test/english" element={<EnglishTEst/>}/>
+          <Route path="/test/maths" element={<Mathematics/>}/>
 
         </Routes>
         <Footer/>
