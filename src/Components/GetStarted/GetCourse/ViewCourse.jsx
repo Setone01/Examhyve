@@ -3,12 +3,13 @@ import styled from "styled-components";
 import Button from "../../BUTTON/Button";
 // import math from "../../Utils/images/image 13.png";
 import { ViewsData } from "../../../Utils/Db/dummydata";
+import route from "../../../routes.const";
 import { useNavigate } from "react-router-dom";
 
 const ViewCourse = () => {
   const navigate = useNavigate();
   function handleNavigate() {
-    navigate("/blog");
+    navigate(route.english);
   }
 
   return (
@@ -27,7 +28,7 @@ const ViewCourse = () => {
                 <div className="Title">
                   <h3>{data.subject}</h3>
                 </div>
-                <Button onClick={handleNavigate} btnText="Start Test" />
+                <Button onClick={handleNavigate} btnText="Start Test"/>
               </div>
             </div>
           ))}
